@@ -7,7 +7,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 
-public class ClientHttp {
+public class ClienteHttp {
 	
 	public String buscarDados(String url) {
 		try {
