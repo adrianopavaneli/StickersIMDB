@@ -15,8 +15,8 @@ public class ClientHttp {
 		
 		
 		URI endereco = URI.create(url);
-		var client = HttpClient.newHttpClient();
-		var request = HttpRequest.newBuilder(endereco).GET().build();
+		HttpClient client = HttpClient.newHttpClient();
+		HttpRequest request = HttpRequest.newBuilder(endereco).GET().build();
 		HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
 		String body = response.body();
 		System.out.println(body);
