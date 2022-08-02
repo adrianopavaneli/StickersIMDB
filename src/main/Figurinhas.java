@@ -12,7 +12,7 @@ import javax.imageio.ImageIO;
 public class Figurinhas {
 
 	
-	public void cria(InputStream impuStream, String nomeArquivo) throws Exception{
+	public void cria(InputStream impuStream, String nomeArquivo, double nota) throws Exception{
 		BufferedImage imagemOriginal = ImageIO.read(impuStream);
 		
 		int width = imagemOriginal.getWidth();
@@ -23,13 +23,32 @@ public class Figurinhas {
 		Graphics2D graphics = (Graphics2D) newImage.getGraphics();
 		graphics.drawImage(imagemOriginal, 0, 0, null);
 		
+				
 		
-		Font fonte = new Font(Font.SANS_SERIF, Font.BOLD, 80);
-		graphics.setColor(Color.YELLOW);
-		graphics.setFont(fonte);
+		if(nota >= 9.0) {
+			Font fonte = new Font(Font.SERIF, Font.BOLD, 80);
+			graphics.setColor(Color.YELLOW);
+			graphics.setFont(fonte);
+			graphics.drawString("ESPETACULAR", 140, newHeight - 100);
+		}
+		if(nota >= 8.8 && nota < 9.0) {
+			Font fonte = new Font(Font.SANS_SERIF, Font.BOLD, 80);
+			graphics.setColor(Color.YELLOW);
+			graphics.setFont(fonte);
+			graphics.drawString("OTIMO", 140, newHeight - 100);
+		}
+		if(nota < 8.8) {
+			Font fonte = new Font(Font.SANS_SERIF, Font.BOLD, 80);
+			graphics.setColor(Color.YELLOW);
+			graphics.setFont(fonte);
+			graphics.drawString("MUITO BOM", 140, newHeight - 100);
+		}
 		
 		
-		graphics.drawString("TOPZERA", 140, newHeight - 100);
+			
+		
+		
+		
 		
 		ImageIO.write(newImage, "png",  new File(nomeArquivo));
 		

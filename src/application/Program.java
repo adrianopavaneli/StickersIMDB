@@ -29,12 +29,17 @@ public class Program {
 		
 		Figurinhas geradora = new Figurinhas();
 		
-		for(int i = 0; i < 20; i++) {
+		for(int i = 0; i < 250; i++) {
 			Conteudo conteudo = conteudos.get(i);
 			InputStream inputStream = new URL(conteudo.getUrlImagem()).openStream();
 			String nomeArquivo = "imagens/" + conteudo.getTitulo() + ".png"; 
+			String notaString = conteudo.getNota();
+			double nota = Double.parseDouble(notaString);
 			
-			geradora.cria(inputStream, nomeArquivo);
+			
+			
+			
+			geradora.cria(inputStream, nomeArquivo, nota);
 			
 			System.out.println("Titulo: " + conteudo.getTitulo());
 			System.out.println("Ano: " + conteudo.getAno());
