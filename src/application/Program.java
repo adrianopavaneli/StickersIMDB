@@ -40,9 +40,9 @@ public class Program {
 		
 			geradora.cria(inputStream, nomeArquivo, nota);
 			
-			System.out.println("Titulo: " + conteudo.getTitulo());
-			System.out.println("Ano: " + conteudo.getAno());
-			System.out.println("Nota: " + conteudo.getNota());
+			System.out.println("\u001b[36;1m\u001b[47;3m\u001b[1m\u001b[3mTítulo: \u001b[m" + conteudo.getTitulo());
+			System.out.println("\u001b[36;1m\u001b[47;3m\u001b[1m\u001b[3mAno: \u001b[m" + conteudo.getAno());
+			System.out.println("\u001b[33;1m\u001b[47;3mClassificação:\u001b[m" + " " + conteudo.getNota());
 			
 			float notafilme = Float.parseFloat(conteudo.getNota());
 			String estrelas = "";
