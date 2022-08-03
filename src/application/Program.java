@@ -37,8 +37,7 @@ public class Program {
 			double nota = Double.parseDouble(notaString);
 			
 			
-			
-			
+		
 			geradora.cria(inputStream, nomeArquivo, nota);
 			
 			System.out.println("Titulo: " + conteudo.getTitulo());
