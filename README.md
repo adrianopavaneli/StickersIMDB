@@ -9,6 +9,8 @@
 
 O Sistema consome um API do IMDB, como os 250 filmes mais votados, busca nome, ano e nota do filme, classifica com estrelas a nota do filme e gera um stickers para whatsapp para cada filme com o cartaz, e de acordo com sua nota, aparece como espetacular, otimo ou muito bom.
 
+Esse projeto eu tinha feito em uma imersão java da alura, mas bem simples, aí resolvi fazer do zero o programa com varias melhorais.
+
 
 
 ## Telas
